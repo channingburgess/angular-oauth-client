@@ -19,6 +19,8 @@ import { AccountModule }  from './account/account.module';
 import { ShellModule } from './shell/shell.module';
 import { ContentModule } from './Content/content.module';
 import { SharedModule }   from './shared/shared.module';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { SharedModule }   from './shared/shared.module';
   ],
   imports: [
     BrowserModule,  
+    MaterialModule,
     HttpClientModule, 
     CoreModule,
     LandingModule,
@@ -34,7 +37,8 @@ import { SharedModule }   from './shared/shared.module';
     ContentModule,   
     AppRoutingModule,
     ShellModule,   
-    SharedModule    
+    SharedModule, 
+    BrowserAnimationsModule    
   ],
   providers: [
     ConfigService
